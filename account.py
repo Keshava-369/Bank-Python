@@ -7,7 +7,7 @@ class Account:
         self.transaction = []
 
     def deposit(self,amount): #Deposit Amount
-        self.balance = amount
+        self.balance += amount
         print(f'The Balance After Depositing:{self.balance}')
         self.transaction.append(amount)
 
@@ -25,3 +25,4 @@ class Account:
 
     def transaction(self): #Total Transactions
         print(f'The Transactions are:{self.transaction}')
+
