@@ -1,28 +1,21 @@
-class Account: 
-    acc_count = 0
-    def __init__(self,Person,acc_type='Saving Account'):
-        self.Person = Person
-        self.acc_type = acc_type
-        self.balance = 0
-        self.transaction = []
+class Account:
+    def __init__(self, balance=0):
+        self.balance = balance
 
-    def deposit(self,amount): #Deposit Amount
-        self.balance += amount
-        print(f'The Balance After Depositing:{self.balance}')
-        self.transaction.append(amount)
+    def deposit(self, amount):
+        if amount > 0:
+            self.balance += amount
+            return True  # Deposit successful
+        return False  # Deposit failed
 
-    def withdraw(self,amount): #Withdraw Amount
-        print(f'The Amount You Entered to Withdraw is:{amount}')
-        self.balance -= amount
-        print(f'The Amount Withdrawn Successfully \n The Balance:{self.balance}')
+    def withdraw(self, amount):
+        if 0 < amount <= self.balance:
+            self.balance -= amount
+            return True  # Withdrawal successful
+        return False  # Withdrawal failed
 
-    def check_balnce(self): #Balance Enquiry
-        print(f'The Leftover Balance in Your Account is:{self.balance}')
+    def get_balance(self):
+        return self.balance
 
-    def account_info(self): #Account Basic Details
-        print(f'The Account Holder Name:{self.Person}')
-        print(f'The Account Holder Account Type:{self.acc_type}')
-
-    def transaction(self): #Total Transactions
-        print(f'The Transactions are:{self.transaction}')
-
+    def display_balance(self):
+        print(f"Current balance: ${self.get_balance()}")
