@@ -1,14 +1,14 @@
-# Bank-Python
+# 🏦 Bank-Python
 
-A simple Python-based bank system built for learning and practice.
+> A lightweight, Practise Python banking system for practicing OOP, and CLI interactions.
 
-## Features
-- Account creation and management
-- Person (customer) data handling
-- Basic banking operations (deposit, withdraw, etc.)
 
-## Installation
-```bash
-git clone https://github.com/Keshava-369/Bank-Python.git
-cd Bank-Python
-pip install -r requirements.txt
+## Overview
+
+This project simulates a basic bank where users can:
+- Create and manage bank accounts
+- Handle customer (person) data
+- Perform deposits, withdrawals, and balance checks
+
+Perfect for beginners learning Python fundamentals!
+
